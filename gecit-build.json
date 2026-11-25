@@ -1,10 +1,10 @@
 {
-  "loaderUrl": "Build/c15e829afd84912ade240ee662dd8fdd.loader.js",
-  "dataUrl": "Build/dee56f624c292e6020b4d89a783a6bfe.data.unityweb",
-  "frameworkUrl": "Build/64caac35f8acf9fc8060080d447d5f02.framework.js.unityweb",
-  "codeUrl": "Build/bc815d068095e0f294698c96bf077553.wasm.unityweb",
+  "loaderUrl": "Build/69936dbd3af22399590905f3bc91ca39.loader.js",
+  "dataUrl": "Build/d6a2262797e244452055357af90c8bd6.data.unityweb",
+  "frameworkUrl": "Build/ee512e9ac15d004939e2cf6dc4c1544c.framework.js.unityweb",
+  "codeUrl": "Build/b9ab125bb800d969d086d1853e0f3db3.wasm.unityweb",
   "companyName": "DefaultCompany",
   "productName": "Deneme",
-  "productVersion": "0.4.0-alpha.5",
+  "productVersion": "0.4.0-alpha.7",
   "streamingAssetsUrl": "StreamingAssets"
 }
