@@ -1,0 +1,147 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+  color: #fff7e6;
+  background: #151c1b;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { width: 100%; height: 100%; margin: 0; }
+body { overscroll-behavior: none; }
+
+#game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  isolation: isolate;
+  background: #151c1b;
+}
+#game:fullscreen { width: 100vw; height: 100vh; height: 100dvh; }
+.field {
+  position: absolute;
+  inset: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+         env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+#unity-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #151c1b;
+  touch-action: none;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  overflow-y: auto;
+  background:
+    linear-gradient(90deg, rgb(13 24 23 / 73%), transparent 72%),
+    linear-gradient(0deg, rgb(10 19 18 / 86%), transparent 75%),
+    url("kale.jpg") 60% 46% / cover no-repeat;
+}
+.intro {
+  width: min(100%, 35rem);
+  margin: auto 0 0;
+  padding: max(1rem, env(safe-area-inset-top)) 1.4rem
+           max(clamp(1.4rem, 8vh, 5rem), env(safe-area-inset-bottom))
+           max(clamp(1.5rem, 7vw, 6rem), calc(env(safe-area-inset-left) + 1rem));
+}
+h1 {
+  margin: 0 0 .4rem;
+  font: 500 clamp(3.5rem, 8.8vw, 7.25rem)/.96 Georgia, "Times New Roman", serif;
+  letter-spacing: -.055em;
+  text-shadow: 0 2px 14px rgb(0 0 0 / 25%);
+}
+.objective {
+  max-width: 23rem;
+  margin: .85rem 0 1.4rem;
+  font-size: clamp(.97rem, 1.55vw, 1.13rem);
+  line-height: 1.45;
+}
+#start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.1rem;
+  min-height: 48px;
+  padding: .7rem 1.2rem;
+  border: 1px solid #f4d398;
+  border-radius: 2px;
+  background: #e8c78c;
+  color: #202820;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.3;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+#start::after { content: "›"; font-size: 1.5rem; line-height: .7; }
+#start:focus-visible { outline: 2px solid #fff9ed; outline-offset: 4px; }
+#start:hover { background: #f1d49e; }
+#start:active { transform: translateY(1px); }
+.notice, .rotate-intro, noscript {
+  max-width: 26rem;
+  margin: .7rem 0 0;
+  font-size: .91rem;
+  line-height: 1.35;
+  color: #fff1d3;
+}
+.notice:empty, .rotate-intro { display: none; }
+.rotate-play {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  width: max-content;
+  max-width: 88%;
+  padding: .6rem .85rem;
+  margin: 0;
+  transform: translateX(-50%);
+  background: rgb(21 28 27 / 90%);
+  color: #fff1d3;
+  font-size: .9rem;
+  pointer-events: none;
+}
+#alternatives { display: flex; flex-wrap: wrap; gap: 0 1.2rem; }
+#alternatives a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #f5d297;
+  font-size: .94rem;
+  text-underline-offset: .24em;
+}
+#download { width: min(100%, 16rem); }
+progress {
+  display: block;
+  width: 100%;
+  height: .4rem;
+  margin: 1rem 0 .7rem;
+  border: none;
+  background: #525b51;
+  accent-color: #e8c78c;
+}
+progress::-webkit-progress-bar { background: #525b51; }
+progress::-webkit-progress-value { background: #e8c78c; }
+progress::-moz-progress-bar { background: #e8c78c; }
+
+@media (orientation: portrait) and (max-width: 900px) {
+  .cover {
+    background:
+      linear-gradient(0deg, rgb(10 19 18 / 94%) 0%, rgb(10 19 18 / 74%) 23%, transparent 76%),
+      url("kale.jpg") 59% center / cover no-repeat;
+  }
+  .rotate-intro { display: block; }
+}
+@media (orientation: landscape) and (max-height: 440px) {
+  .intro { padding-bottom: max(1.15rem, env(safe-area-inset-bottom)); }
+  h1 { font-size: clamp(2.8rem, 13vh, 4.3rem); }
+  .objective { margin: .5rem 0 .8rem; }
+}

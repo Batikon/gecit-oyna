@@ -1,0 +1,8 @@
+/Build/** -text
+*.jpg binary
+*.png binary
+*.mp4 binary
+*.html text eol=lf
+*.css text eol=lf
+/gecit.js text eol=lf
+*.json text eol=lf

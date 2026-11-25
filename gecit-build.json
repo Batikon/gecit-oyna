@@ -1,0 +1,10 @@
+{
+  "loaderUrl": "Build/11eae3b548d1485a281118258ffcfd6b.loader.js",
+  "dataUrl": "Build/db7e760fae73d4b875ba16ab240509fd.data.unityweb",
+  "frameworkUrl": "Build/f6218db39b453c6707329899e5b8f1ec.framework.js.unityweb",
+  "codeUrl": "Build/4dd4c60e602a6240d3464119aa2ac882.wasm.unityweb",
+  "companyName": "DefaultCompany",
+  "productName": "Deneme",
+  "productVersion": "0.3.1",
+  "streamingAssetsUrl": "StreamingAssets"
+}
