@@ -6,3 +6,4 @@
 *.css text eol=lf
 /gecit.js text eol=lf
 *.json text eol=lf
+/StreamingAssets/** -text

@@ -55,6 +55,8 @@ body { overscroll-behavior: none; }
            max(clamp(1.4rem, 8vh, 5rem), env(safe-area-inset-bottom))
            max(clamp(1.5rem, 7vw, 6rem), calc(env(safe-area-inset-left) + 1rem));
 }
+.title-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem .85rem; }
+.version { font-size: .85rem; letter-spacing: .04em; color: #e8d3ae; }
 h1 {
   margin: 0 0 .4rem;
   font: 500 clamp(3.5rem, 8.8vw, 7.25rem)/.96 Georgia, "Times New Roman", serif;
