@@ -1,5 +1,13 @@
 "use strict";
 
+function syncVisibleWidth() {
+  const width = window.visualViewport?.width || window.innerWidth;
+  document.documentElement.style.setProperty("--gecit-visible-width", width + "px");
+}
+syncVisibleWidth();
+window.visualViewport?.addEventListener("resize", syncVisibleWidth);
+window.addEventListener("resize", syncVisibleWidth);
+
 const game = document.getElementById("game");
 const canvas = document.getElementById("unity-canvas");
 const cover = document.getElementById("cover");
