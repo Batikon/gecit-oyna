@@ -44,9 +44,9 @@ body { overscroll-behavior: none; }
   align-items: flex-end;
   overflow-y: auto;
   background:
-    linear-gradient(90deg, rgb(13 24 23 / 73%), transparent 72%),
-    linear-gradient(0deg, rgb(10 19 18 / 86%), transparent 75%),
-    url("kale.jpg") 60% 46% / cover no-repeat;
+    linear-gradient(90deg, rgb(13 24 23 / 55%), transparent 66%),
+    linear-gradient(0deg, rgb(10 19 18 / 65%), transparent 60%),
+    url("kale.jpg") 60% 15% / cover no-repeat;
 }
 .intro {
   width: min(100%, 35rem);
